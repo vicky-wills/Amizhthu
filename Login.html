@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/Amizhthu.css">
+    <link rel="shortcut icon" href="assets/images/fevicon.png">
+
+    <!-- ========== Start Scrolling js ========== -->
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>ScrollReveal({ reset: true });</script>
+
+    <!-- ========== Start lottie player ========== -->
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+
+    <!-- ========== End lottie player ========== -->
+
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+
+    <title>Amizhthu</title>
+</head>
+
+<body onload="myFunction()">
+
+    <div class="black-overlay" id="black-overlay"></div>
+
+    <!-- <div id="loading"></div> -->
+
+    <section class="mobile"></section>
+    <section class="tablet"></section>
+
+    <!-- ========== Start Hero ========== -->
+    <section class="h_hero">
+        <header class="l_header_section">
+
+            <div class="logo_container">
+                <a href="">
+                    <img src="assets/images/home/logo.png" alt="" class="logo">
+                    <img src="assets/images/home/logo_hover.png" alt="" class="logo_hover">
+                </a>
+
+                <div class="logo_animation_1520">
+                    <lottie-player id="location" src="assets/images/gifs/Amizhthu 1520.json"
+                        style="width: 1920px; height: 80px;" loop autoplay>
+                    </lottie-player>
+                </div>
+
+                <div class="logo_animation">
+                    <lottie-player id="location" src="assets/images/gifs/Amizhthu.json"
+                        style="width: 1920px; height: 80px;" loop autoplay>
+                    </lottie-player>
+                </div>
+            </div>
+
+            <div class="l_h_navbar">
+                <button onclick="openLogin()" class="l_login"><span></span>Login</button>
+                <button onclick="openSign()" class="l_sign"><span></span>Sign up</button>
+            </div>
+        </header>
+        <div class="l_h_content">
+
+            <div class="l-slider-container">
+                <div class="v_slider_container">
+                    <ul class="v-slides">
+                        <li class="v-slide">Hungry?</li>
+                        <li class="v-slide">Unexpected guests?</li>
+                        <li class="v-slide">Cooking gone wrong?</li>
+                        <li class="v-slide">Budget friendly?</li>
+                        <li class="v-slide">Budget friendly?</li>
+                    </ul>
+                </div>
+
+                <p>Order food from Amizhthu home style food service.</p>
+            </div>
+            <div class="l_search">
+                <div>
+                    <div class="l_location">
+                        <div class="l_search_location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M12 1.5C9.81277 1.50258 7.71584 2.3726 6.16923 3.91922C4.62261 5.46584 3.75259 7.56276 3.75001 9.75C3.74739 11.5374 4.33124 13.2763 5.41201 14.7C5.41201 14.7 5.63701 14.9963 5.67376 15.039L12 22.5L18.3293 15.0353C18.3623 14.9955 18.588 14.7 18.588 14.7L18.5888 14.6978C19.669 13.2747 20.2526 11.5366 20.25 9.75C20.2474 7.56276 19.3774 5.46584 17.8308 3.91922C16.2842 2.3726 14.1873 1.50258 12 1.5ZM12 12.75C11.4067 12.75 10.8266 12.5741 10.3333 12.2444C9.83995 11.9148 9.45543 11.4462 9.22837 10.8981C9.00131 10.3499 8.9419 9.74667 9.05765 9.16473C9.17341 8.58279 9.45913 8.04824 9.87869 7.62868C10.2982 7.20912 10.8328 6.9234 11.4147 6.80764C11.9967 6.69189 12.5999 6.7513 13.1481 6.97836C13.6962 7.20542 14.1648 7.58994 14.4944 8.08329C14.8241 8.57664 15 9.15666 15 9.75C14.999 10.5453 14.6826 11.3078 14.1202 11.8702C13.5578 12.4326 12.7954 12.749 12 12.75Z"
+                                    fill="currentcolor" />
+                            </svg>
+                            <input type="text" placeholder="Enter your delivery location">
+                        </div>
+                        <button class="l_locate">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path opacity="0.3"
+                                    d="M11.7073 13.2916C12.5818 13.2916 13.2907 12.5827 13.2907 11.7083C13.2907 10.8338 12.5818 10.125 11.7073 10.125C10.8329 10.125 10.124 10.8338 10.124 11.7083C10.124 12.5827 10.8329 13.2916 11.7073 13.2916Z"
+                                    fill="black" />
+                                <path
+                                    d="M11.7073 8.54166C9.95777 8.54166 8.54069 9.95875 8.54069 11.7083C8.54069 13.4579 9.95777 14.875 11.7073 14.875C13.4569 14.875 14.874 13.4579 14.874 11.7083C14.874 9.95875 13.4569 8.54166 11.7073 8.54166ZM11.7073 13.2916C10.8365 13.2916 10.124 12.5791 10.124 11.7083C10.124 10.8375 10.8365 10.125 11.7073 10.125C12.5782 10.125 13.2907 10.8375 13.2907 11.7083C13.2907 12.5791 12.5782 13.2916 11.7073 13.2916ZM18.7848 10.9166C18.6055 9.31126 17.8856 7.81455 16.7434 6.67229C15.6011 5.53004 14.1044 4.81015 12.499 4.63083V3H10.9157V4.63083C9.31028 4.81015 7.81357 5.53004 6.67132 6.67229C5.52907 7.81455 4.80918 9.31126 4.62985 10.9166H2.99902V12.5H4.62985C4.80918 14.1054 5.52907 15.6021 6.67132 16.7443C7.81357 17.8866 9.31028 18.6065 10.9157 18.7858V20.4166H12.499V18.7858C14.1044 18.6065 15.6011 17.8866 16.7434 16.7443C17.8856 15.6021 18.6055 14.1054 18.7848 12.5H20.4157V10.9166H18.7848ZM11.7073 17.25C8.6436 17.25 6.16569 14.772 6.16569 11.7083C6.16569 8.64458 8.6436 6.16666 11.7073 6.16666C14.7711 6.16666 17.249 8.64458 17.249 11.7083C17.249 14.772 14.7711 17.25 11.7073 17.25Z"
+                                    fill="currentcolor" />
+                            </svg>Locate Me
+                        </button>
+                    </div>
+                    <div class="l_find">
+                        <button>FIND FOOD</button>
+                    </div>
+                </div>
+                <div class="l_error" id="l_error">
+                    <p>Enter your delivery location</p>
+                </div>
+            </div>
+
+            <p>Now we available only in Tenkasi</p>
+
+        </div>
+        <div class="l_hero_img"></div>
+    </section>
+    <!-- ========== End Hero ========== -->
+
+    <!-- ========== Start Features ========== -->
+    <section class="l_features">
+        <div class="l_feature">
+            <lottie-player id="l_cart" src="assets/images/gifs/cart.json" style="width: 150px; height: 150px;" loop
+                autoplay>
+            </lottie-player>
+            <h3>No Minimum Order</h3>
+            <p>Order in for yourself or for the group, with no restrictions on order value.</p>
+        </div>
+        <div class="l_feature">
+            <lottie-player id="l_pan" src="assets/images/gifs/pan.json" style="width: 200px; height: 200px;" loop
+                autoplay>
+            </lottie-player>
+            <h3>Traditional Home made</h3>
+            <p>Ultimate non-veg healthy virunthu for the weekend from Amizhthu.</p>
+        </div>
+        <div class="l_feature">
+            <lottie-player id="l_location" src="assets/images/gifs/delivery.json" style="width: 150px; height: 150px;"
+                loop autoplay>
+            </lottie-player>
+            <h3>Quick & Cheap Delivery</h3>
+            <p>Experience Amizhthu superfast delivery for food delivered fresh & on time.</p>
+        </div>
+    </section>
+    <!-- ========== End Features ========== -->
+
+    <!-- ========== Start App ========== -->
+    <section class="l_app">
+        <img src="assets/images/landing/App logo.png" alt="">
+        <div class="l_app_conent">
+            <div class="l_app_head">
+                <h1>Get the Amizhthu App</h1>
+                <p>Order from your favorite home food & track on the go, with the all-new Amizhthu app.</p>
+            </div>
+            <div class="l_app_footer">
+                <div class="apple">
+                    <img src="assets/images/home/apple.png" alt="apple logo">
+                    <div>
+                        <p>Download on the</p>
+                        <h6>App Store</h6>
+                    </div>
+                </div>
+                <div class="google">
+                    <img src="assets/images/home//google.png" alt="Google playstore logo">
+                    <div>
+                        <p>GET IT ON</p>
+                        <h6>Google play</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== End App ========== -->
+
+    <!-- ========== Start App ========== -->
+    <section class="l_map">
+        <div class="l_map_head">
+            <h1>Our Service Limited area</h1>
+            <a href="">View all places In Tenkasi</a>
+        </div>
+        <div class="l_map_body">
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31528.70230157853!2d77.29696875560971!3d8.964058288211808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0429c15ac547f7%3A0x9a707276cd8ae327!2sTenkasi%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1663669887081!5m2!1sen!2sin"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="l_places">
+            <div>
+                <p>Tenkasi</p>
+                <p>Mathalamparai</p>
+                <p>Azad Nagar</p>
+                <p>Tenkasi</p>
+                <p>Mathalamparai</p>
+                <p>Azad Nagar</p>
+            </div>
+            <div>
+                <p>Melagaram</p>
+                <p>Nanagaram</p>
+                <p>Ilanji</p>
+                <p>Melagaram</p>
+                <p>Nanagaram</p>
+                <p>Ilanji</p>
+            </div>
+            <div>
+                <p>Courtallam</p>
+                <p>Minnagar</p>
+                <p>Kudiyiruppu</p>
+                <p>Courtallam</p>
+                <p>Minnagar</p>
+                <p>Kudiyiruppu</p>
+            </div>
+            <div>
+                <p>Aayikudi</p>
+                <p>Pattappathu</p>
+                <p>Melameiganapuram</p>
+                <p>Aayikudi</p>
+                <p>Pattappathu</p>
+                <p>Melameiganapuram</p>
+            </div>
+        </div>
+  
+    </section>
+    <!-- ========== End App ========== -->
+
+    <!-- ========== Start Footer ========== -->
+    <section class="footer">
+        <footer>
+            <div class="foo_body">
+                <div class="foo_head">
+                    <a href="index.html" class="f_logo" style="width: 150px; height: 48px;">அமிழ்து</a>
+                    <div class="foo_head_container">
+                        <p>Lorem ipsum dolor sit amet,consectetur, Lorem-600012.</p>
+                        <div class="foo_social_container">
+                            <div class="foo_social">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M13.397 20.9971V12.8011H16.162L16.573 9.59217H13.397V7.54817C13.397 6.62217 13.655 5.98817 14.984 5.98817H16.668V3.12717C15.8487 3.03936 15.0251 2.99696 14.201 3.00017C11.757 3.00017 10.079 4.49217 10.079 7.23117V9.58617H7.33203V12.7951H10.085V20.9971H13.397Z"
+                                        fill="currentcolor" />
+                                </svg>
+                            </div>
+                            <div class="foo_social">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M23.643 4.93695C22.808 5.30695 21.911 5.55696 20.968 5.66996C21.941 5.08775 22.669 4.17142 23.016 3.09195C22.1019 3.63494 21.1014 4.01715 20.058 4.22196C19.3564 3.47282 18.4271 2.97628 17.4143 2.80943C16.4016 2.64258 15.3621 2.81475 14.4572 3.29921C13.5524 3.78367 12.8328 4.55332 12.4102 5.48866C11.9875 6.424 11.8855 7.4727 12.12 8.47195C10.2677 8.37895 8.45564 7.8975 6.80144 7.05886C5.14723 6.22022 3.68785 5.04312 2.51801 3.60396C2.11801 4.29396 1.88801 5.09396 1.88801 5.94596C1.88757 6.71295 2.07644 7.4682 2.43789 8.14469C2.79934 8.82118 3.32217 9.39799 3.96001 9.82396C3.22029 9.80042 2.49688 9.60054 1.85001 9.24095V9.30095C1.84994 10.3767 2.22204 11.4193 2.90319 12.252C3.58434 13.0846 4.53258 13.6559 5.58701 13.869C4.9008 14.0547 4.18135 14.082 3.48301 13.949C3.78051 14.8746 4.36001 15.684 5.14038 16.2639C5.92075 16.8438 6.86293 17.1651 7.83501 17.183C6.18485 18.4784 4.1469 19.181 2.04901 19.178C1.67739 19.1781 1.30609 19.1564 0.937012 19.113C3.06649 20.4821 5.54535 21.2088 8.07701 21.206C16.647 21.206 21.332 14.108 21.332 7.95195C21.332 7.75195 21.327 7.54995 21.318 7.34995C22.2293 6.69093 23.0159 5.87485 23.641 4.93995L23.643 4.93695V4.93695Z"
+                                        fill="currentcolor" />
+                                </svg>
+                            </div>
+                            <div class="foo_social">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M7.465 1.066C8.638 1.012 9.012 1 12 1C14.988 1 15.362 1.013 16.534 1.066C17.706 1.119 18.506 1.306 19.206 1.577C19.939 1.854 20.604 2.287 21.154 2.847C21.714 3.396 22.146 4.06 22.422 4.794C22.694 5.494 22.88 6.294 22.934 7.464C22.988 8.639 23 9.013 23 12C23 14.988 22.987 15.362 22.934 16.535C22.881 17.705 22.694 18.505 22.422 19.205C22.146 19.9391 21.7133 20.6042 21.154 21.154C20.604 21.714 19.939 22.146 19.206 22.422C18.506 22.694 17.706 22.88 16.536 22.934C15.362 22.988 14.988 23 12 23C9.012 23 8.638 22.987 7.465 22.934C6.295 22.881 5.495 22.694 4.795 22.422C4.06092 22.146 3.39582 21.7133 2.846 21.154C2.28638 20.6047 1.85331 19.9399 1.577 19.206C1.306 18.506 1.12 17.706 1.066 16.536C1.012 15.361 1 14.987 1 12C1 9.012 1.013 8.638 1.066 7.466C1.119 6.294 1.306 5.494 1.577 4.794C1.85372 4.06008 2.28712 3.39531 2.847 2.846C3.39604 2.2865 4.06047 1.85344 4.794 1.577C5.494 1.306 6.294 1.12 7.464 1.066H7.465ZM16.445 3.046C15.285 2.993 14.937 2.982 12 2.982C9.063 2.982 8.715 2.993 7.555 3.046C6.482 3.095 5.9 3.274 5.512 3.425C4.999 3.625 4.632 3.862 4.247 4.247C3.88205 4.60205 3.60118 5.03428 3.425 5.512C3.274 5.9 3.095 6.482 3.046 7.555C2.993 8.715 2.982 9.063 2.982 12C2.982 14.937 2.993 15.285 3.046 16.445C3.095 17.518 3.274 18.1 3.425 18.488C3.601 18.965 3.882 19.398 4.247 19.753C4.602 20.118 5.035 20.399 5.512 20.575C5.9 20.726 6.482 20.905 7.555 20.954C8.715 21.007 9.062 21.018 12 21.018C14.938 21.018 15.285 21.007 16.445 20.954C17.518 20.905 18.1 20.726 18.488 20.575C19.001 20.375 19.368 20.138 19.753 19.753C20.118 19.398 20.399 18.965 20.575 18.488C20.726 18.1 20.905 17.518 20.954 16.445C21.007 15.285 21.018 14.937 21.018 12C21.018 9.063 21.007 8.715 20.954 7.555C20.905 6.482 20.726 5.9 20.575 5.512C20.375 4.999 20.138 4.632 19.753 4.247C19.3979 3.88207 18.9657 3.60121 18.488 3.425C18.1 3.274 17.518 3.095 16.445 3.046ZM10.595 15.391C11.3797 15.7176 12.2534 15.7617 13.0669 15.5157C13.8805 15.2697 14.5834 14.7489 15.0556 14.0422C15.5278 13.3356 15.7401 12.4869 15.656 11.6411C15.572 10.7953 15.197 10.005 14.595 9.405C14.2112 9.02148 13.7472 8.72781 13.2363 8.54515C12.7255 8.36248 12.1804 8.29536 11.6405 8.34862C11.1006 8.40187 10.5792 8.57418 10.1138 8.85313C9.64846 9.13208 9.25074 9.51074 8.9493 9.96185C8.64786 10.413 8.45019 10.9253 8.37052 11.462C8.29084 11.9986 8.33115 12.5463 8.48854 13.0655C8.64593 13.5847 8.91648 14.0626 9.28072 14.4647C9.64496 14.8668 10.0938 15.1832 10.595 15.391ZM8.002 8.002C8.52702 7.47698 9.15032 7.0605 9.8363 6.77636C10.5223 6.49222 11.2575 6.34597 12 6.34597C12.7425 6.34597 13.4777 6.49222 14.1637 6.77636C14.8497 7.0605 15.473 7.47698 15.998 8.002C16.523 8.52702 16.9395 9.15032 17.2236 9.8363C17.5078 10.5223 17.654 11.2575 17.654 12C17.654 12.7425 17.5078 13.4777 17.2236 14.1637C16.9395 14.8497 16.523 15.473 15.998 15.998C14.9377 17.0583 13.4995 17.654 12 17.654C10.5005 17.654 9.06234 17.0583 8.002 15.998C6.94166 14.9377 6.34597 13.4995 6.34597 12C6.34597 10.5005 6.94166 9.06234 8.002 8.002ZM18.908 7.188C19.0381 7.06527 19.1423 6.91768 19.2143 6.75397C19.2863 6.59027 19.3248 6.41377 19.3274 6.23493C19.33 6.05609 19.2967 5.87855 19.2295 5.71281C19.1622 5.54707 19.0624 5.39651 18.936 5.27004C18.8095 5.14357 18.6589 5.04376 18.4932 4.97652C18.3275 4.90928 18.1499 4.87598 17.9711 4.87858C17.7922 4.88119 17.6157 4.91965 17.452 4.9917C17.2883 5.06374 17.1407 5.1679 17.018 5.298C16.7793 5.55103 16.6486 5.88712 16.6537 6.23493C16.6588 6.58274 16.7992 6.91488 17.0452 7.16084C17.2911 7.40681 17.6233 7.54723 17.9711 7.5523C18.3189 7.55737 18.655 7.42669 18.908 7.188Z"
+                                        fill="currentcolor" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="foo_containers">
+                    <div class="foo_sections">
+                        <h4>Company</h4>
+                        <div class="sec_containers" style="width: 120px;">
+                            <a href="#h_abt_us">
+                                <p>About Us</p>
+                            </a>
+                            <a href="#h_abt_us">
+                                <p>Certification</p>
+                            </a>
+                            <a href="#h_hiw">
+                                <p>How it works</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="foo_sections">
+                        <h4>Policy</h4>
+                        <div class="sec_containers" style="width: 75px;">
+                            <a href="">
+                                <p>FAQ</p>
+                            </a>
+                            <a href="">
+                                <p>Contact</p>
+                            </a>
+                            <a href="">
+                                <p>Shipping</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="foo_sections">
+                        <h4>Get In Touch</h4>
+                        <div class="sec_containers" style="width: 202px;">
+                            <p>91954868✗✗✗✗</p>
+                            <p>loremipsum@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="foo_sections">
+                        <h4>Discover Our App</h4>
+                        <div class="sec_containers_app">
+                            <div class="apple">
+                                <img src="assets/images/home/apple.png" alt="apple logo">
+                                <div>
+                                    <p>Download on the</p>
+                                    <h6>App Store</h6>
+                                </div>
+                            </div>
+                            <div class="google">
+                                <img src="assets/images/home//google.png" alt="Google playstore logo">
+                                <div>
+                                    <p>GET IT ON</p>
+                                    <h6>Google play</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="f_copyrigths">
+                <p>© 2021 the Amizhthu, Inc. All rights reserved.</p>
+            </div>
+        </footer>
+    </section>
+    <!-- ========== End Footer ========== -->
+
+    <!-- ========== Start Login ========== -->
+    <section class="login" id="login">
+        <div class="login_head">
+            <div>
+                <h3>Login</h3>
+                <p>or <a href="#sign_up">create an account</a></p>
+                <hr>
+            </div>
+            <img src="assets/images/icons/outline/Cross.svg" alt="close" onclick="closeLogin()">
+        </div>
+        <form action="">
+            <div class="login_body">
+                <div>
+                    <input type="text" required>
+                    <span>Phone number or Email</span>
+                </div>
+            </div>
+            <div class="login_footer">
+                <button><a href="index.html">LOGIN</button>
+                <p>By creating an account, I accept the <a>Terms & Conditions & Privacy Policy</a></p>
+            </div>
+        </form>
+    </section>
+
+    <section class="sign_up" id="sign_up">
+        <div class="login_head">
+            <div>
+                <h3>Sign up</h3>
+                <p>or <a>login to your account</a></p>
+                <hr>
+            </div>
+            <img src="assets/images/icons/outline/Cross.svg" alt="close" onclick="closeSign()">
+        </div>
+        <form action="">
+            <div class="login_body">
+                <div>
+                    <input type="number" required>
+                    <span>Phone number</span>
+                </div>
+                <div>
+                    <input type="text" required>
+                    <span>Name</span>
+                </div>
+                <div>
+                    <input type="email" required>
+                    <span>Email</span>
+                </div>
+                <div>
+                    <input type="password" required>
+                    <span>Password</span>
+                </div>
+            </div>
+            <a href="" class="referral">Have a referral code?</a>
+            <div class="login_footer">
+                <button><a href="index.html">SIGN UP</button>
+                <p>By creating an account, I accept the <a>Terms & Conditions & Privacy Policy</a></p>
+            </div>
+        </form>
+    </section>
+    <!-- ========== End Login ========== -->
+
+    <script type="text/javascript">
+        function openLogin() {
+            document.getElementById("login").style.display = "flex";
+            document.getElementById("black-overlay").style.display = "block";
+        }
+
+        function closeLogin() {
+            document.getElementById("login").style.display = "none";
+            document.getElementById("black-overlay").style.display = "none";
+        }
+        function openSign() {
+            document.getElementById("sign_up").style.display = "flex";
+            document.getElementById("black-overlay").style.display = "block";
+        }
+
+        function closeSign() {
+            document.getElementById("sign_up").style.display = "none";
+            document.getElementById("black-overlay").style.display = "none";
+        }
+    </script>
+
+    <script>
+        var vsOpts = {
+            $slides: $('.v-slide'),
+            $list: $('.v-slides'),
+            duration: 7,
+            lineHeight: 120
+        }
+
+        var vSlide = new TimelineMax({
+            paused: true,
+            repeat: -1
+        })
+
+        vsOpts.$slides.each(function (i) {
+            vSlide.to(vsOpts.$list, vsOpts.duration / vsOpts.$slides.length, {
+                y: i * -1 * vsOpts.lineHeight,
+                ease: Elastic.easeOut.config(1, 0.4)
+            })
+        })
+        vSlide.play()
+    </script>
+
+</body>
+
+
+</html>
