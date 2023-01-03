@@ -2149,6 +2149,63 @@ footer::before {
 
 }
 
+@media screen and (max-width: 1400px) {
+
+  /***** footer *****/
+
+  .foo_body {
+    justify-content: flex-start;
+  }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+
+  .v_slider_container ul li {
+    font-size: 40px !important;
+  }
+
+  .l_location {
+    width: 400px !important;
+    height: 54px;
+  }
+
+  .l_find button {
+    font-size: 14px !important;
+    width: 120px !important;
+  }
+
+  .l-slider-container p {
+    font-size: 16px !important;
+  }
+
+}
+
+@media screen and (min-width: 451px) and (max-width: 600px) {
+
+  .v_slider_container ul li {
+    font-size: 30px !important;
+  }
+
+  .l_location {
+    width: 300px !important;
+  }
+
+  .l_locate{
+    display: none !important;
+  }
+
+  .l_find button {
+    font-size: 14px !important;
+    width: 100px !important;
+  }
+
+  .l-slider-container p {
+    font-size: 14px !important;
+  }
+
+}
+
 @media screen and (max-width: 450px) {
 
   .mobile {
@@ -2518,7 +2575,6 @@ footer::before {
   display: none;
 }
 
-
 /* Overlay */
 
 .black-overlay {
@@ -2768,6 +2824,7 @@ input::-webkit-inner-spin-button {
 
 .l_features {
   display: flex;
+  flex-wrap: wrap;
   gap: 100px;
   padding: 40px 0px 100px;
   align-items: flex-end;
@@ -2799,9 +2856,9 @@ input::-webkit-inner-spin-button {
 .l_app {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 100px;
   background-color: #f9f9f9;
   z-index: -2;
 }
@@ -2825,6 +2882,7 @@ input::-webkit-inner-spin-button {
   display: flex;
   flex-direction: column;
   gap: 48px;
+  padding: 48px;
 }
 
 .l_app_head {
@@ -2917,6 +2975,8 @@ input::-webkit-inner-spin-button {
 
 .l_places {
   display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
   justify-content: space-between;
 }
 
