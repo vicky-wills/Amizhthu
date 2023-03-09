@@ -11,24 +11,47 @@
     <link rel="stylesheet" href="assets/css/Amizhthu.css">
 
     <style>
-        .certificate {
+        .h_hero_img {
+            padding: 20px;
+        }
+
+        .certificates-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 24px;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
         }
 
-        .certificate img {
+        .certificates-container .file-container {
             cursor: zoom-in;
-            width: 100%;
+            width: 480px;
+            height: 680px;
             box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            padding: 0;
         }
 
-        .certificate a {
+        .certificates-container .file {
+            justify-content: center;
+            width: 2000px;
+            height: 2400px;
+            border: 0px;
+
+            -ms-transform: scale(0.81);
+            -moz-transform: scale(0.81);
+            -o-transform: scale(0.81);
+            -webkit-transform: scale(0.81);
+            transform: scale(0.81);
+
+            -ms-transform-origin: 0 0;
+            -moz-transform-origin: 0 0;
+            -o-transform-origin: 0 0;
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+        }
+
+
+        .certificates-container a {
             padding: 12px 24px;
             border-radius: 6px;
             background-color: #FFBE33;
@@ -42,18 +65,19 @@
             transition: ease-in 300ms;
         }
 
-        .certificate a:hover {
+        .certificates-container a:hover {
             background-color: #FFB514;
             box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14), 0px 3px 3px rgba(0, 0, 0, 0.12), 0px 1px 8px rgba(0, 0, 0, 0.2);
         }
 
-
         @media screen and (min-width:300px) and (max-width: 500px) {
-            .certificate img {
-                width: 100%;
+
+            .certificates-container {
+                transform: scale(76%) !important;
             }
 
-            .certificate a {
+
+            .certificates-container a {
                 padding: 6px 12px;
                 border-radius: 4px;
                 font-size: 10px;
@@ -64,11 +88,12 @@
 
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media only screen and (min-width: 600px) {
-            .certificate img {
-                width: 100%;
+
+            .certificates-container {
+                transform: scale(78%) !important;
             }
 
-            .certificate a {
+            .certificates-container a {
                 padding: 8px 16px;
                 border-radius: 6px;
                 font-size: 14px;
@@ -78,11 +103,12 @@
 
         /* Medium devices (landscape tablets, 768px and up) */
         @media only screen and (min-width: 768px) {
-            .certificate img {
-                width: 100%;
+
+            .certificates-container {
+                transform: scale(80%) !important;
             }
 
-            .certificate a {
+            .certificates-container a {
                 padding: 8px 16px;
                 border-radius: 6px;
                 font-size: 14px;
@@ -92,11 +118,12 @@
 
         /* Large devices (laptops/desktops, 992px and up) */
         @media only screen and (min-width: 992px) {
-            .certificate img {
-                width: 100%;
+
+            .certificates-container {
+                transform: scale(82%) !important;
             }
 
-            .certificate a {
+            .certificates-container a {
                 padding: 12px 24px;
                 border-radius: 6px;
                 font-size: 16px;
@@ -106,19 +133,40 @@
 
         /* Extra large devices (large laptops and desktops, 1200px and up) */
         @media only screen and (min-width: 1200px) {
-            .certificate img {
-                width: 70%;
+            .certificates-container {
+                transform: scale(84%) !important;
+            }
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1500px) {
+            .certificates-container {
+                transform: scale(100%);
             }
         }
     </style>
+    <script>
+        function getCertificate() {
+            if ("VG4OSYJM2VU3TKZL" == window.location.search.replace("?id=", "")) {
+                var iframe = document.getElementById("certificate");
+                iframe.src = "assets/images/certificate/Employement_Letter_Vignesh M.png";
+                var downloadButton = document.getElementById("certificate_download");
+                downloadButton.href = "assets/images/certificate/Employement_Letter_Vignesh M.pdf";
+            } else {
+                alert("invalid request")
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body onload="getCertificate()">
     <!-- <div id="loading"></div> -->
     <section class="h_hero_img">
-        <div class="certificate">
-            <img src="assets/images/certificate/Employement_Letter_Vignesh M.png" alt="">
-            <a href="assets/images/certificate/Employement_Letter_Vignesh M.png.pdf">Download Certificate</a>
+        <div class="certificates-container">
+            <div class="file-container">
+                <iframe id="certificate" src="" frameborder="0" class="file"></iframe>
+            </div>
+            <a href="" id="certificate_download">Download Certificate</a>
         </div>
     </section>
 </body>
